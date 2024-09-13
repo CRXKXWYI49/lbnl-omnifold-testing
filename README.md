@@ -20,3 +20,11 @@ First, clone this repository (if you haven't already) into your local machine:
 ```bash
 git clone [<your-repo-url>](https://github.com/CRXKXWYI49/lbnl-omnifold-testing.git)
 cd [<your-repo-directory>](https://github.com/CRXKXWYI49/lbnl-omnifold-testing.git)
+```
+
+## 2. Create Conda Environment
+
+Create a Conda environment using the `environment.yml` file provided in this repository:
+
+```bash
+conda env create -f environment.yml
