@@ -1,8 +1,8 @@
-# Boosted Decision Tree Omnifold
+# Testing a Boosted Decision Tree Impementation of Omnifold
 
 ## Overview
 
-Provide a brief overview of what your project does and its purpose. This can include a few sentences describing the functionality of your code and the context in which it is used.
+This project compares a boosted decision tree implementation of omnifold to DNN based omnifold and Iterative Bayesian Unfolding
 
 ## Prerequisites
 
