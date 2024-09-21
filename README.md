@@ -1,30 +1,51 @@
-# README.md
+# Boosted Decision Tree Omnifold
 
-## Project Overview
+## Overview
 
-This project involves setting up an environment for data unfolding using various repositories that implement unfolding techniques. The instructions below will guide you through the setup process, including creating a Conda environment and cloning the necessary repositories.
+Provide a brief overview of what your project does and its purpose. This can include a few sentences describing the functionality of your code and the context in which it is used.
 
 ## Prerequisites
 
-Before starting, ensure you have the following installed on your system:
+Before you begin, ensure you have the following software installed on your system:
 
-- [Anaconda](https://www.anaconda.com/products/distribution) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
-- Git
+- [Git](https://git-scm.com/)
+- [Conda](https://docs.conda.io/en/latest/miniconda.html) (Miniconda/Anaconda)
+- [CMake](https://cmake.org/) (for building RooUnfold)
 
-## Setup Instructions
+## Installation Instructions
 
-### 1. Clone this Repository
+Follow these steps to set up the environment and dependencies required for this project.
 
-First, clone this repository (if you haven't already) into your local machine:
+### 1. Clone Dependency Repositories
+
+First, clone the following repositories into your home directory as they are required dependencies:
 
 ```bash
-git clone [<your-repo-url>](https://github.com/CRXKXWYI49/lbnl-omnifold-testing.git)
-cd [<your-repo-directory>](https://github.com/CRXKXWYI49/lbnl-omnifold-testing.git)
+git clone https://github.com/rymilton/unfolding.git ~/unfolding
+git clone https://github.com/ericmetodiev/OmniFold.git ~/OmniFold
+git clone https://github.com/ViniciusMikuni/OmniLearn.git ~/OmniLearn
+git clone https://gitlab.cern.ch/RooUnfold/RooUnfold.git ~/RooUnfold
 ```
 
-## 2. Create Conda Environment
+###  2. Build RooUnfold
 
-Create a Conda environment using the `environment.yml` file provided in this repository:
+Once you've cloned the RooUnfold repository, navigate to the directory and build it using the following commands:
+
+```bash
+cd ~/RooUnfold
+mkdir build
+cd build
+cmake ..
+make -j4
+cd ..
+source build/setup.sh
+```
+
+### 3. Set Up Conda Environment
+
+To ensure all required Python dependencies are installed, create the conda environment using the provided `environment.yml` file.
 
 ```bash
 conda env create -f environment.yml
+conda activate <environment_name>
+```
