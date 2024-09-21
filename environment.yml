@@ -1,4 +1,4 @@
-name: bdt_omnifold
+name: hepml
 channels:
   - conda-forge
   - defaults
